@@ -20,11 +20,19 @@ class RPL2Latihan1 {
 				System.out.println(" antara kuadran 5 dan 6");
 			else
 				System.out.println(" antara kuadran 1 dan 2");
-		} else if (x == 0)
+		} else if (x == 0) {
 			System.out.printf("Koordinat (0,%d) berada di sumbu-y\n", y);
-		else if (y == 0)
+			if (y >= 0)
+				System.out.println(" antara kuadran 2 dan 3");
+			else
+				System.out.println(" antara kuadran 6 dan 7");
+		} else if (y == 0) {
 			System.out.printf("Koordinat (%d,0) berada di sumbu-x\n", x);
-		else {
+			if (x >= 0)
+				System.out.println(" antara kuadran 4 dan 5");
+			else
+				System.out.println(" antara kuadran 1 dan 8");
+		} else {
 			double angle = Math.toDegrees(Math.atan2(y, x));
 
 			if (angle >= 0 && angle <= 45)
