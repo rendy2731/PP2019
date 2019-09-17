@@ -18,10 +18,12 @@ class RPL2Tugas4 {
 						break;
 					case "ice":
 					case "electric":
+						// Menang
 						System.out.println(poke1);
 						break;
 					case "water":
 					case "ground":
+						// Kalah
 						System.out.println(poke2);
 						break;
 					default:
@@ -36,10 +38,12 @@ class RPL2Tugas4 {
 						break;
 					case "ground":
 					case "water":
+						// Menang
 						System.out.println(poke1);
 						break;
 					case "fire":
 					case "electric":
+						// Kalah
 						System.out.println(poke2);
 						break;
 					default:
@@ -54,11 +58,14 @@ class RPL2Tugas4 {
 						break;
 					case "fire":
 					case "electric":
+						// Menang
 						System.out.println(poke1);
 						break;
 					case "water":
 					case "ice":
+						// Kalah
 						System.out.println(poke2);
+						break;
 					default:
 						System.out.println("missingno element: 2nd pokemon");
 				}
@@ -71,10 +78,12 @@ class RPL2Tugas4 {
 						break;
 					case "water":
 					case "ice":
+						// Menang
 						System.out.println(poke1);
 						break;
 					case "fire":
 					case "ground":
+						// Kalah
 						System.out.println(poke2);
 						break;
 					default:
@@ -89,10 +98,12 @@ class RPL2Tugas4 {
 						break;
 					case "fire":
 					case "ground":
+						// Menang
 						System.out.println(poke1);
 						break;
 					case "ice":
 					case "electric":
+						// Kalah
 						System.out.println(poke2);
 						break;
 					default:
