@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import org.w3c.dom.ranges.RangeException;
-
 class RPL2Latihan2 {
 	// Buatlah program untuk menghitung durasi sebuah acara yang diketahui
 	// waktu mulai dan waktu berakhirnya acara. Acara tersebut dapat
