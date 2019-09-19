@@ -22,14 +22,6 @@ class RPL2Tugas2 {
 			switch (jenis) {
 				case 1: {
 					// Bangun datar
-					// 1. Persegi
-					// 2. Persegi Panjang
-					// 3. Segitiga
-					// 4. Lingkaran
-					// 5. Jajargenjang
-					// 6. Trapesium
-					// 7. Belah Ketupat
-					// 8. Layang-layang
 					System.out.println("** Pilih Bangun Datar **");
 					System.out.println("1. Persegi");
 					System.out.println("2. Persegi Panjang");
@@ -114,14 +106,6 @@ class RPL2Tugas2 {
 				}
 				case 2: {
 					// Bangun ruang
-					// 1. Kubus
-					// 2. Balok
-					// 3. Prisma Segitiga
-					// 4. Limas Segitiga
-					// 5. Limas Segiempat
-					// 6. Tabung
-					// 7. Kerucut
-					// 8. Bola
 					System.out.println("** Pilih Bangun Ruang **");
 					System.out.println("1. Kubus");
 					System.out.println("2. Balok");
@@ -153,62 +137,60 @@ class RPL2Tugas2 {
 							System.out.printf("Volume Balok = %.3f\n", panjang * lebar * tinggi);
 							break;
 						}
-						case 3:
-						case 6: {
-							// Prisma Segitiga atau Tabung
-							boolean tabung = bangunRuang == 6;
-							double luasAlas;
-							String jenisBangunRuang = tabung ? "Tabung" : "Prisma Segitiga";
-
-							if (tabung) {
-								System.out.println("Input jari-jari lingkaran pada tutup prisma");
-								double jariJari = sc.nextDouble();
-								luasAlas = Math.PI * jariJari * jariJari;
-							} else {
-								System.out.println("Input alas segitiga pada tutup prisma");
-								double alas = sc.nextDouble();
-								System.out.println("Input tinggi segitiga pada tutup prisma");
-								double tinggi = sc.nextDouble();
-								luasAlas = alas * tinggi / 2.0;
-							}
-
-							System.out.println("Input tinggi");
+						case 3: {
+							// Prisma Segitiga
+							System.out.println("Input alas segitiga pada tutup prisma");
+							double alas = sc.nextDouble();
+							System.out.println("Input tinggi segitiga pada tutup prisma");
 							double tinggi = sc.nextDouble();
-							System.out.printf("Volume %s = %.3f\n", jenisBangunRuang, luasAlas * tinggi);
+							double luasAlas = alas * tinggi / 2.0;
+							System.out.println("Input tinggi prisma");
+							double tinggiPrisma = sc.nextDouble();
+							System.out.printf("Volume Prisma Segitiga = %.3f\n", luasAlas * tinggiPrisma);
 							break;
 						}
-						case 4:
-						case 5:
-						case 7: {
-							// Limas Segitiga, Limas Segiempat, atau Kerucut
-							// Kerucut sebenarnya Limas Lingkaran
-							double luasAlas;
-							String jenisBangun;
-
-							if (bangunRuang == 4) {
-								System.out.println("Input alas segitiga pada alas limas");
-								double alas = sc.nextDouble();
-								System.out.println("Input tinggi segitiga pada alas limas");
-								double tinggi = sc.nextDouble();
-								luasAlas = alas * tinggi / 2.0;
-								jenisBangun = "Limas Segitiga";
-							} else if (bangunRuang == 5) {
-								System.out.println("Input panjang alas limas");
-								double panjang = sc.nextDouble();
-								System.out.println("Input lebar alas limas");
-								double lebar = sc.nextDouble();
-								luasAlas = panjang * lebar;
-								jenisBangun = "Limas Segiempat";
-							} else {
-								System.out.println("Input jari-jari lingkaran");
-								double jariJari = sc.nextDouble();
-								jenisBangun = "Kerucut";
-								luasAlas = Math.PI * jariJari * jariJari;
-							}
-
+						case 4: {
+							// Limas Segitiga
+							System.out.println("Input alas segitiga pada alas limas");
+							double alas = sc.nextDouble();
+							System.out.println("Input tinggi segitiga pada alas limas");
+							double tinggi = sc.nextDouble();
+							double luasAlas = alas * tinggi / 2.0;
+							System.out.println("Input tinggi limas");
+							double tinggiLimas = sc.nextDouble();
+							System.out.printf("Volume Limas Segitiga = %.3f\n", luasAlas * tinggiLimas / 3.0);
+							break;
+						}
+						case 5: {
+							// Limas Segiempat
+							System.out.println("Input panjang alas limas");
+							double panjang = sc.nextDouble();
+							System.out.println("Input lebar alas limas");
+							double lebar = sc.nextDouble();
+							double luasAlas = panjang * lebar;
+							System.out.println("Input tinggi limas");
+							double tinggi = sc.nextDouble();
+							System.out.printf("Volume Limas Segiempat = %.3f\n", luasAlas * tinggi / 3.0);
+							break;
+						}
+						case 6: {
+							// Tabung
+							System.out.println("Input jari-jari lingkaran pada tutup prisma");
+							double jariJari = sc.nextDouble();
+							double luasAlas = Math.PI * jariJari * jariJari;
 							System.out.println("Input tinggi");
 							double tinggi = sc.nextDouble();
-							System.out.printf("Volume %s = %.3f\n", jenisBangun, luasAlas * tinggi / 3.0);
+							System.out.printf("Volume Tabung = %.3f\n", luasAlas * tinggi);
+							break;
+						}
+						case 7: {
+							// Kerucut
+							System.out.println("Input jari-jari lingkaran");
+							double jariJari = sc.nextDouble();
+							double luasAlas = Math.PI * jariJari * jariJari;
+							System.out.println("Input tinggi");
+							double tinggi = sc.nextDouble();
+							System.out.printf("Volume Kerucut = %.3f\n", luasAlas * tinggi / 3.0);
 							break;
 						}
 						case 8: {
@@ -222,6 +204,8 @@ class RPL2Tugas2 {
 						default:
 							throw new RuntimeException("nomor bangun ruang tidak valid");
 					}
+
+					break;
 				}
 				default:
 					throw new RuntimeException("nomor pilihan tidak valid");
