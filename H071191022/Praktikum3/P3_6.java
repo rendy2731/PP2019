@@ -11,7 +11,6 @@ public class P3_6 {
             System.out.println(angka + " bukan bilangan prima");
             System.exit(0);
         }
-        
     }
     System.out.println(angka + " bilangan prima");
 }
