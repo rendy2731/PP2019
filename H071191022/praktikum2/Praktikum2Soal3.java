@@ -4,7 +4,6 @@ class Praktikum2Soal3 {
     public static void main(String[] args) {
         Scanner pt = new Scanner (System.in);
         
-        
         try{
             int a = pt.nextInt();
             int b = pt.nextInt();
@@ -15,11 +14,12 @@ class Praktikum2Soal3 {
             int negatif = 0;
             int ganjil = 0;
             int genap = 0;
+            
             if (a % 2 == 0){
-                if (a>0){
+                if (a>=0){
                     genap++;
                     positif++;
-                }else if (a<0){
+                }else if (a<=0){
                     genap++;
                     negatif++;
                 }
@@ -33,10 +33,10 @@ class Praktikum2Soal3 {
                 }
             }
             if (b % 2 == 0){
-                if (b>0){
+                if (b>=0){
                     genap++;
                     positif++;
-                }else if (b<0){
+                }else if (b<=0){
                     genap++;
                     negatif++;
                 }
@@ -50,10 +50,10 @@ class Praktikum2Soal3 {
                 }
             }
             if (c % 2 == 0){
-                if (c>0){
+                if (c>=0){
                     genap++;
                     positif++;
-                }else if (c<0){
+                }else if (c<=0){
                     genap++;
                     negatif++;
                 }
@@ -67,10 +67,10 @@ class Praktikum2Soal3 {
                 }
             }
             if(d % 2 == 0){
-                if (d>0){
+                if (d>=0){
                     genap++;
                     positif++;
-                }else if (d<0){
+                }else if (d<=0){
                     genap++;
                     negatif++;
                 }
@@ -84,10 +84,10 @@ class Praktikum2Soal3 {
                 }
             }
             if (e % 2 == 0){
-                if (e>0){
+                if (e>=0){
                     genap++;
                     positif++;
-                }else if (e<0){
+                }else if (e<=0){
                     genap++;
                     negatif++;
                 }
