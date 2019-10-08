@@ -19,50 +19,34 @@ class RPL4Latihan2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int banyakPemain = sc.nextInt();
-		int totalServis = 0;
-		int servisBerhasil = 0;
-		int totalBlock = 0;
-		int blockBerhasil = 0;
-		int totalSmash = 0;
-		int smashBerhasil = 0;
+		// [0] = servis, [1] = block, [2] = smash
+		int total[] = {0, 0, 0};
+		int berhasil[] = {0, 0, 0};
 
-		for (int i = 0; i < banyakPemain; i++) {
-			// Nama
+		int n = sc.nextInt();
+		for (int i = 0; i < n; i++) {
 			String nama = sc.next();
-			int banyakServisPemain = sc.nextInt();
-			int banyakBlockPemain = sc.nextInt();
-			int banyakSmashPemain = sc.nextInt();
 
-			int servisBerhasilPemain = sc.nextInt();
-			if (servisBerhasilPemain > banyakServisPemain) {
-				System.out.println("Entah apa yang merasuki banyak servis " + nama);
-				return;
+			// [0] = servis, [1] = block, [2] = smash
+			int totalSBS[] = {0, 0, 0};
+
+			for (int j = 0; j < 3; j++) {
+				totalSBS[j] = sc.nextInt();
+				total[j] += totalSBS[j];
 			}
-
-			int blockBerhasilPemain = sc.nextInt();
-			if (blockBerhasilPemain > banyakBlockPemain) {
-				System.out.println("Entah apa yang merasuki banyak block " + nama);
-				return;
+			for (int j = 0; j < 3; j++) {
+				int k = sc.nextInt();
+				if (k > totalSBS[j]) {
+					System.out.println("Entah apa yang merasuki input " + nama);
+					return;
+				}
+				berhasil[j] += k;	
 			}
-
-			int smashBerhasilPemain = sc.nextInt();
-			if (smashBerhasilPemain > banyakSmashPemain) {
-				System.out.println("Entah apa yang merasuki banyak smash " + nama);
-				return;
-			}
-
-			totalServis += banyakServisPemain;
-			totalBlock += banyakBlockPemain;
-			totalSmash += banyakSmashPemain;
-			servisBerhasil += servisBerhasilPemain;
-			blockBerhasil += blockBerhasilPemain;
-			smashBerhasil += smashBerhasilPemain;
 		}
 
-		double persentaseServis = servisBerhasil * 100.0 / (totalServis * 1.0);
-		double persentaseBlock = blockBerhasil * 100.0 / (totalBlock * 1.0);
-		double persentaseSmash = smashBerhasil * 100.0 / (totalSmash * 1.0);
+		double persentaseServis = berhasil[0] * 100.0 / (total[0] * 1.0);
+		double persentaseBlock = berhasil[1] * 100.0 / (total[1] * 1.0);
+		double persentaseSmash = berhasil[2] * 100.0 / (total[2] * 1.0);
 		System.out.printf("Servis: %.2f%%\n", persentaseServis);
 		System.out.printf("Block: %.2f%%\n", persentaseBlock);
 		System.out.printf("Smash: %.2f%%\n", persentaseSmash);
