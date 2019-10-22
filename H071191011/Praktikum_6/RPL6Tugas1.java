@@ -4,19 +4,8 @@ class RPL6Tugas1 {
 	// Transformasi 1: Buat kata baru dari kata tanpa spasi yang memuat
 	// (karakter / 2) huruf pertama.
 	static String ubah1(String s) {
-		char c[] = s.toUpperCase().toCharArray();
-		int length = c.length;
-
-		for (int i = 0, j = 0; i < c.length; i++) {
-			if (c[i] == ' ') {
-				length--;
-				continue;
-			}
-			c[j++] = c[i];
-		}
-
-		// new String(char[], int offset, int length)
-		return new String(c, 0, length / 2);
+		String withoutSpace = s.replaceAll(" ", "").toUpperCase();
+		return withoutSpace.substring(0, withoutSpace.length() / 2);
 	}
 	
 	// Transformasi 2: Manipulasi kata baru menjadi palindrom

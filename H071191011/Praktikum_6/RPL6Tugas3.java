@@ -13,10 +13,10 @@ class RPL6Tugas3 {
 		for (int i = 0; i < c.length; i++) {
 			char ch = c[i];
 
-			if (ch >= 65 && ch <= 90) {
-				c[i] = (char) (Math.floorMod(ch - 65 + n, 26) + 65);
+			if (ch >= 'A' && ch <= 'Z') {
+				c[i] = (char) (Math.floorMod(ch - 'A' + n, 26) + 'A');
 			} else if (ch >= 97 && ch <= 122) {
-				c[i] = (char) (Math.floorMod(ch - 97 + n, 26) + 97);
+				c[i] = (char) (Math.floorMod(ch - 'a' + n, 26) + 'a');
 			}
 		}
 
