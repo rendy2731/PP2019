@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - P5_2",
+            "request": "launch",
+            "mainClass": "P5_2",
+            "projectName": "Praktikum5_c9ebb6e4"
+        }
+    ]
+}
