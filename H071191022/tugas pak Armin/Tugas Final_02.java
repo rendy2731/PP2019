@@ -13,7 +13,7 @@ public class P2_2 {
         int [][] matriksRS = new int [r][s];
 
 
-        if (q==r){
+        if (q==r || s==p){
         //input matriks PQ
         System.out.println("input matriks " + p + " kali " + q);
         for (int i = 0; i < p; i++) {
@@ -38,10 +38,20 @@ public class P2_2 {
                 for (int k = 0; k < q; k++) {
                     result += matriksPQ[i][k] * matriksRS [k][l];
                 }System.out.print(result + " ");
-        }System.out.println();
+        }System.out.println();   
     }
-    }else{
+
+        System.out.println("hasil kali matriks RS dan PQ");
+        for (int k = 0; k < r; k++) {
+            for (int j = 0; j < q ; j++) {
+                int result2 = 0;
+                for (int i = 0; i < p; i++) {
+                    result2 += matriksRS[k][i] * matriksPQ [i][j];
+                }System.out.print(result2 + " ");
+            }System.out.println();
+        }
+        }else{
         System.out.println("perkalian matriks tidak bisa dilakukan");
+        }
     }
-}
 }
