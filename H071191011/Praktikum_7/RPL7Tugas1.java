@@ -1,7 +1,4 @@
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.InputMismatchException;
+import java.util.*;
 
 class RPL7Tugas1 {
 	// Buatlah sebuah origram dengan tema "Favourite Movie" yang dapat
