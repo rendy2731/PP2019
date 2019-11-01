@@ -1,7 +1,7 @@
 import java.util.*;
 
 class RPL7Tugas1 {
-	// Buatlah sebuah origram dengan tema "Favourite Movie" yang dapat
+	// Buatlah sebuah program dengan tema "Favourite Movie" yang dapat
 	// menyimpan, menampilkan, mencari, dan menghapus daftar film-film
 	// kesukaan Anda beserta detail dari film tersebut, seperti judul,
 	// tanggal rilis, durasi, genre, sinopsis, serta daftar aktor dan

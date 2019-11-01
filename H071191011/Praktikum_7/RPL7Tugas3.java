@@ -33,11 +33,18 @@ class RPL7Tugas3 {
 		boolean canDivide = true;
 		// Loop
 		while (x != 0) {
-			int c = (x / 10) % 10;
+			int c = x % 10;
 			x /= 10;
 
-			if (c == 0)
-				continue;
+			// Cek jika digit nol
+			if (c == 0) {
+				if (x == 0)
+					continue;
+				else {
+					canDivide = false;
+					break;
+				}
+			}
 			if (i % c != 0) {
 				// Jika tidak bisa dibagi habis, set ke false
 				canDivide = false;
@@ -51,6 +58,9 @@ class RPL7Tugas3 {
 	}
 
 	static String arrayToString(ArrayList al) {
+		if (al.size() == 0)
+			return "[];";
+
 		StringBuilder sb = new StringBuilder("[");
 		for (Object obj: al) {
 			sb.append(obj.toString());
