@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Fatwa",
+            "request": "launch",
+            "mainClass": "Fatwa",
+            "projectName": "Praktikum7_c9ebb6e6"
+        }
+    ]
+}
