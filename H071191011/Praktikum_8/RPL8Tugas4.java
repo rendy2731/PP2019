@@ -78,6 +78,7 @@ class RPL8Tugas4 {
 					if (i > 0 && i <= data.size()) {
 						data.remove(i - 1);
 						saveData(data);
+						showUsers(data);
 					} else
 						System.out.println("Penghapusan data gagal");
 					

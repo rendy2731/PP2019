@@ -36,7 +36,7 @@ class RPL8Tugas2 {
 			String format = String.format("%%%ds\n", max);
 			for (String s: lines) {
 				if (s.length() > 0)
-					writer.printf(format, s.replaceAll("%", "%%"));
+					writer.printf(format, s);
 				else
 					writer.println();
 			}

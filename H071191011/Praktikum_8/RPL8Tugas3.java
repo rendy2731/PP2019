@@ -6,7 +6,7 @@ class RL8Tugas3 {
 		Scanner sc = new Scanner(System.in);
 
 		// Nama file
-		String filename = sc.next();
+		String filename = sc.next() + ".txt";
 
 		// Banyak inputan
 		int n = sc.nextInt();
