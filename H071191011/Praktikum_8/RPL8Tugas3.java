@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 class RL8Tugas3 {
 	public static void main(String[] args) {
@@ -14,17 +14,27 @@ class RL8Tugas3 {
 		// Init
 		String name[] = new String[n];
 		String id[] = new String[n];
-		int year[] = new int[n];
+		String year[] = new String[n];
 
+		// Panjang tabel
+		int maxName = 4;
+		int maxID = 3;
+		int maxYear = 8;
+
+		// TODO: Buat tabel elastis.
 		for (int i = 0; i < n; i++) {
 			// Nama: kalo ada spasi pake underscore (replace underscore jadi spasi)
 			// Nama: Max 20
 			String nameTemp = sc.next().replaceAll("_", " ");
 			name[i] = nameTemp.substring(0, Math.min(nameTemp.length(), 20));
+			maxName = Math.max(maxName, name[i].length());
 			// NIM: Max 10
-			id[i] = sc.next().substring(0, 10);
+			String idTemp = sc.next();
+			id[i] = idTemp.substring(0, Math.min(idTemp.length(), 10));
+			maxID = Math.max(maxID, id[i].length());
 			// Angkatan
-			year[i] = sc.nextInt();
+			year[i] = String.valueOf(sc.nextInt());
+			maxYear = Math.max(maxYear, year[i].length());
 		}
 
 		// Buka file
@@ -33,13 +43,19 @@ class RL8Tugas3 {
 			out = new FileOutputStream(filename);
 			PrintWriter writer = new PrintWriter(out);
 
+			// Buat formatter
+			String formatter = String.format("| %%-%ds | %%-%ds | %%-%ds |\n", maxName, maxID, maxYear);
+
+			// Pembatas
+			String border = String.format("+-%s-+-%s-+-%s-+", rep('-', maxName), rep('-', maxID), rep('-', maxYear));
+
 			// Tulis file
-			writer.println("+----------------------+------------+----------+");
-			writer.println("| Nama                 | NIM        | Angkatan |");
-			writer.println("+----------------------+------------+----------+");
+			writer.println(border);
+			writer.printf(formatter, "Nama", "NIM", "Angkatan");
+			writer.println(border);
 			for (int i = 0; i < n; i++)
-				writer.printf("| %-20s | %-10s | %-8d |\n", name[i], id[i], year[i]);
-			writer.println("+----------------------+------------+----------+");
+				writer.printf(formatter, name[i], id[i], year[i]);
+			writer.println(border);
 
 			// Selesai
 			writer.flush();
@@ -54,5 +70,12 @@ class RL8Tugas3 {
 				System.exit(1);
 			}
 		}
+	}
+
+	// Method untuk menduplikasi char menjadi string
+	static String rep(char c, int n) {
+		char ch[] = new char[n];
+		Arrays.fill(ch, c);
+		return new String(ch);
 	}
 }
