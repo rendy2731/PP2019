@@ -21,12 +21,9 @@ class RL8Tugas3 {
 		int maxID = 3;
 		int maxYear = 8;
 
-		// TODO: Buat tabel elastis.
 		for (int i = 0; i < n; i++) {
 			// Nama: kalo ada spasi pake underscore (replace underscore jadi spasi)
-			// Nama: Max 20
-			String nameTemp = sc.next().replaceAll("_", " ");
-			name[i] = nameTemp.substring(0, Math.min(nameTemp.length(), 20));
+			name[i] = sc.next().replaceAll("_", " ");
 			maxName = Math.max(maxName, name[i].length());
 			// NIM: Max 10
 			String idTemp = sc.next();
