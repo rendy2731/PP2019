@@ -1,0 +1,6 @@
+NIM1;Nama1;Jurusan1;Alamat1;#
+NIM3;Nama3;Jurusan3;Alamat3;#
+NIM4;Nama4P;Jurusan40;Alamat42069;#
+H071687291;アリス・マーガトロイド;Penyihir;Forest of Magic;#
+H071191011;AuahDark;Entah Apa;Yang Merasuki Inputmu;#
+H071999007;エンタープライズ;Yorktown;Sea;#
